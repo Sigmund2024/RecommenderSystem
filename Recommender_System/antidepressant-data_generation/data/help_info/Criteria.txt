@@ -1,0 +1,63 @@
+SSRIs: 44种
+SNRIs: 22种
+Tricyclic and Tetracyclic Antidepressants: 50种
+Atypical Antidepressants: 23种
+MAOIs: 7种
+NMDA Antagonist: 6种
+GABA-A Receptor Positive Modulator: 11种
+
+
+年龄比例：
+            10-18 10%
+            19-39 35%
+            40-59 35%
+            59-80 20%
+性别比例：
+            男 ：女 
+            4  ：6
+MADRS-Score与HAM-A-Score比例：
+抑郁程度大于焦虑程度：
+                    2 1 25%
+                    3 1 20%
+                    3 2 15%
+抑郁程度等于焦虑程度：
+                    1 1 10%        
+                    2 2 10%
+                    3 3 5%
+抑郁程度小于焦虑程度
+                    1 2 5%
+                    1 3 5%
+                    2 3 5%
+
+10-18岁：
+主要选择青少年适用的抗抑郁药物，如某些SSRIs和Atypical Antidepressants类别的药物。
+这个年龄段的用户通常需要较轻和适宜青少年使用的药物。
+19-39岁：
+可以选择更广泛的抗抑郁药物，包括SSRIs、SNRIs、Atypical Antidepressants等。
+这个年龄段的用户对不同类别的药物可能有更好的耐受性和反应。
+40-59岁：
+除了SSRIs、SNRIs、Atypical Antidepressants外，也可以考虑Tricyclic and Tetracyclic Antidepressants和MAOIs这类药物。
+因为这些药物可能更适合中年人的生理特征和病情。
+60-80岁：
+SSRIs、Atypical Antidepressants等，同时避免选择对老年人不适宜的药物，如Tricyclic and Tetracyclic Antidepressants和MAOIs。
+对于老年人群体，更需要考虑药物的安全性和耐受性。因此，主要选择安全性较高的抗抑郁药物。
+
+药物选取原则：          1      2         3                           4                                         5      6                         7             
+10-18岁使用的药物范围：SSRIs、SNRIs、   Atypical Antidepressants
+19-39岁使用的药物范围：SSRIs、SNRIs、   Atypical Antidepressants、Tricyclic and Tetracyclic Antidepressants、MAOIs、NMDA Antagonist、GABA-A Receptor Positive Modulator
+40-59岁使用的药物范围：SSRIs、SNRIs、   Atypical Antidepressants、Tricyclic and Tetracyclic Antidepressants、MAOIs、NMDA Antagonist、GABA-A Receptor Positive Modulator
+60-80岁使用的药物范围：SSRIs、          Atypical Antidepressants
+
+根据焦虑程度细化原则：
+抑郁程度大于焦虑程度：              10-18               19-39           40-59                           60-80
+                    2 1 25%         1、3任选           七种选两种      七种选两种                      两种任选
+                    3 1 20%         1、2、3任选        七种选三种      七种选三种                      两种任选
+                    3 2 15%         1、2、3任选        七种选四种       七种选四种                     两种任选
+抑郁程度等于焦虑程度：
+                    1 1 10%          1、2任选          SNRIs+任意一种   SNRIs+任意一种                  两种任选
+                    2 2 10%          1、2任选          SNRIs+任意两种   SNRIs+任意两种                  两种任选
+                    3 3 5%           1、2、3任选       SNRIs+任意三种   SNRIs+任意三种                  两种任选         
+抑郁程度小于焦虑程度
+                    1 2 5%            1、2任选          SNRIs+任意一种    SNRIs+任意一种                两种任选
+                    1 3 5%            1、2任选          SNRIs+任意两种    SNRIs+任意两种                两种任选
+                    2 3 5%            1、2、3任选       SNRIs+任意三种    SNRIs+任意三种                两种任选
