@@ -11,18 +11,13 @@ from sklearn.metrics import roc_auc_score
 #指标计算函数
 #HR
 def hit_rate(test_data, recommend_data):
-    hits = 0
-    len_real_items=0
-    for user in recommend_data:
-        test_items = test_data[user]
-        len_real_items+=len(test_items)
-        recommender_items=recommend_data[user]
-        #print("user:",user,"items:",recommender_items)
-        for item in recommender_items:
-            #print("item is :",item)
-            if item in test_items:
-                hits += 1
-    return hits / len_real_items
+    hit=0
+    for user_id,items_list in recommend_data.items():
+        for item in items_list:
+            if item in test_data[user_id]:
+                hit+=1
+                break
+    return hit/ len(test_data)
 
 #PPV
 def precision(test_data, recommend_data):
@@ -176,7 +171,7 @@ if __name__ == "__main__":
     recommend_user_items = {}
     for user in user_column:
         #k=len(test_user_items[user])
-        rec_items = bpr.recommend_user(user=user, n_rec=25)      
+        rec_items = bpr.recommend_user(user=user, n_rec=10)      
         recommend_user_items[user] = rec_items[user]
         
     # 计算ppv和recall

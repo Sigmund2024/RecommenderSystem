@@ -65,6 +65,7 @@ def train(model: tf.keras.Model, train_data: List[Tuple[int, int, int]], test_da
         test_loss, test_auc, test_precision, test_recall = get_metric_results()
 
         log(epoch, train_loss, train_auc, train_precision, train_recall, test_loss, test_auc, test_precision, test_recall)
+        
         if topk_data:
-            topk(topk_data, score_fn)
+            topk(epoch,topk_data, score_fn, )
         print('epoch_time=', time.time() - epoch_start_time, 's', sep='')

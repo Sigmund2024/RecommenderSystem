@@ -47,6 +47,23 @@ class Aggregator(tf.keras.layers.Layer):
         return neighbors_aggregated
 
 
+# class SumAggregator(Aggregator):
+#     def build(self, input_shape):
+#         dim = input_shape[-1][-1]
+#         self.kernel = self.add_weight('kernel', shape=(dim, dim), initializer='glorot_uniform', regularizer=self.kernel_regularizer)
+#         self.bias = self.add_weight('bias', shape=(dim,), initializer='zeros')
+
+#     def _call(self, self_vectors, neighbor_vectors, neighbor_relations, user_embeddings, **kwargs):
+#         _, neighbor_iter, dim = self_vectors.shape
+#         neighbors_agg = self._mix_neighbor_vectors(neighbor_vectors, neighbor_relations, user_embeddings)  # [batch, neighbor_iter, dim]
+
+#         output = tf.reshape(self_vectors + neighbors_agg, shape=(-1, dim))  # [batch * neighbor_iter, dim]
+#         #if kwargs['training']:
+#         #    output = tf.nn.dropout(output, rate=0.2)
+#         output = tf.nn.bias_add(tf.matmul(output, self.kernel), self.bias)  # [batch * neighbor_iter, dim]
+
+#         return tf.reshape(output, shape=(-1, neighbor_iter, dim))  # [batch, neighbor_iter, dim]
+
 class SumAggregator(Aggregator):
     def build(self, input_shape):
         dim = input_shape[-1][-1]
@@ -63,6 +80,10 @@ class SumAggregator(Aggregator):
         output = tf.nn.bias_add(tf.matmul(output, self.kernel), self.bias)  # [batch * neighbor_iter, dim]
 
         return tf.reshape(output, shape=(-1, neighbor_iter, dim))  # [batch, neighbor_iter, dim]
+
+    def get_config(self):
+        config = super(SumAggregator, self).get_config()
+        return config
 
 
 class ConcatAggregator(Aggregator):

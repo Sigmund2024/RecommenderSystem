@@ -14,9 +14,9 @@ def log(epoch, train_loss, train_auc, train_precision, train_recall, test_loss, 
 
 
 
-def topk(topk_data: TopkData, score_fn: Callable[[Dict[str, List[int]]], List[float]], ks=[10, 15, 25]):
+def topk(epoch,topk_data: TopkData, score_fn: Callable[[Dict[str, List[int]]], List[float]] ,ks=[10, 15, 25]):
     # 使用 topk_evaluate 函数获取命中率、精确率、召回率和 F1 分数
-    hrs, precisions, recalls, f1s = topk_evaluate(topk_data, score_fn, ks)
+    hrs, precisions, recalls, f1s = topk_evaluate(epoch ,topk_data, score_fn,  ks)
 
     # 遍历所有的 k 值和对应的性能指标
     for k, hr, precision, recall, f1 in zip(ks, hrs, precisions, recalls, f1s):
